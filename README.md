@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/RuslanZavacky/ember-cli-ifa.svg?branch=master)](https://travis-ci.org/RuslanZavacky/ember-cli-ifa)
 [![Code Climate](https://codeclimate.com/github/RuslanZavacky/ember-cli-ifa/badges/gpa.svg)](https://codeclimate.com/github/RuslanZavacky/ember-cli-ifa)
 
-# Ember-cli-ifa
+Ember-cli-ifa
+==============================================================================
 
 Inject fingerprinted assetMap.json file into your app and provide initializer, service, and helper to
 dynamically reference fingerprinted assets.
@@ -17,13 +18,22 @@ imagePath: computed(function() {
 })
 ```
 
-## Installation
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
+Installation
+------------------------------------------------------------------------------
 
 ```bash
 ember install ember-cli-ifa
 ```
 
-## Configuration
+Configuration
+------------------------------------------------------------------------------
 
 Enable addon in `environment.js` for specific environment.
 
@@ -39,7 +49,7 @@ module.exports = function(environment) {
   };
 ```
 
-In case you use s3 and manifest module for ember-cli-deploy, update there configurations in `config/deploy.js`
+In case you use s3 and manifest module for ember-cli-deploy, update their configurations in `config/deploy.js`
 to include `json` as a valid file.
 
 ```javascript
@@ -74,20 +84,21 @@ fingerprint: {
 }
 ```
 
-Note that if you use fastboot, this addon is automatically forced into `inline: true` mode. 
+Note that if you use fastboot, this addon is automatically forced into `inline: true` mode.
 This is necessary, as otherwise fastboot could not easily access that data.
 
-## Usage
+Usage
+------------------------------------------------------------------------------
 
 ### asset-map helper
 
 If `name` is `tomster-under-construction`:
- 
+
 ```html
 <img src={{asset-map (concat "assets/" name ".png")}} />
 ```
 
-then it will generate something like `assets/tomster-under-construction-da524c8bc9283f759ae640b68db81f24.png` base on assetMap.json.
+then it will generate something like `assets/tomster-under-construction-da524c8bc9283f759ae640b68db81f24.png` based on assetMap.json.
 
 ### asset-map service
 
@@ -127,6 +138,17 @@ var app = new EmberApp(defaults, {
 
 ### inline option
 
-If `inline: true` is specified in config, contents of assetMap file will be inline into index.html.
+If `inline: true` is specified in the config, contents of assetMap file will be inline into index.html.
 
 This might save one request to assetMap.json, but will increase overall size of `index.html` file, so use carefully.
+
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
