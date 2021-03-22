@@ -93,7 +93,11 @@ module.exports = {
     let assetMap;
     if (inline && fs.existsSync(assetFileNamePath)) {
       let assetMapContent = fs.readFileSync(assetFileNamePath, { encoding: 'utf-8' });
-      assetMap = JSON.parse(assetMapContent);
+      try {
+        assetMap = JSON.parse(assetMapContent);
+      } catch(e) {
+        console.log('Could not parse assetMap: ', e);
+      }
 
       if (this._isFastBoot) {
         const assetModulePath = assetFileNamePath.replace(/\.json$/, '.js');
