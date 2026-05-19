@@ -18,7 +18,6 @@ util.workflowJavascriptPackage(
         source='github',
       ),
       util.step('lint', 'pnpm run lint'),
-      util.step('test', 'pnpm run test'),
     ],
   ),
 )

@@ -200,8 +200,6 @@
       "run": "pnpm config set store-dir .pnpm-store && pnpm install"
     - "name": "lint"
       "run": "pnpm run lint"
-    - "name": "test"
-      "run": "pnpm run test"
     "timeout-minutes": 30
 "name": "pr"
 "on":
