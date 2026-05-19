@@ -1,5 +1,5 @@
 local util = import '.github/jsonnet/index.jsonnet';
-local image = 'node:24';
+local image = 'europe-docker.pkg.dev/unicorn-985/private-images/docker-images_node24-with-libnss:v1';
 
 util.workflowJavascriptPackage(
   repositories=['github'],
@@ -18,6 +18,7 @@ util.workflowJavascriptPackage(
         source='github',
       ),
       util.step('lint', 'pnpm run lint'),
+      util.step('test', 'pnpm run test'),
     ],
   ),
 )

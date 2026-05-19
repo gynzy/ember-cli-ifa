@@ -127,7 +127,7 @@
     "timeout-minutes": 30
   "test":
     "container":
-      "image": "node:24"
+      "image": "europe-docker.pkg.dev/unicorn-985/private-images/docker-images_node24-with-libnss:v1"
     "runs-on": "ubuntu-latest"
     "steps":
     - "id": "check-binaries"
@@ -200,6 +200,8 @@
       "run": "pnpm config set store-dir .pnpm-store && pnpm install"
     - "name": "lint"
       "run": "pnpm run lint"
+    - "name": "test"
+      "run": "pnpm run test"
     "timeout-minutes": 30
 "name": "pr"
 "on":
