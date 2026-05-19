@@ -1,2 +1,3 @@
 patchedDependencies:
+  fastboot@4.1.5: patches/fastboot@4.1.5.patch
   json-stable-stringify@1.3.0: patches/json-stable-stringify@1.3.0.patch
