@@ -127,6 +127,9 @@
     "timeout-minutes": 30
   "test":
     "container":
+      "credentials":
+        "password": "${{ secrets.docker_gcr_io }}"
+        "username": "_json_key"
       "image": "europe-docker.pkg.dev/unicorn-985/private-images/docker-images_node24-with-libnss:v1"
     "runs-on": "ubuntu-latest"
     "steps":
