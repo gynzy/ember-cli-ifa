@@ -1,0 +1,13 @@
+diff --git a/index.js b/index.js
+index acf3fcfe079afa5788b09d3a18de3c61a5b489a2..3b9025a901ce0cd4f00b65811c2e48840bf7d197 100644
+--- a/index.js
++++ b/index.js
+@@ -102,7 +102,7 @@ module.exports = function stableStringify(obj) {
+ 
+ 			/** @type {import('.').Key[]} */
+ 			// eslint-disable-next-line no-extra-parens
+-			var keys = $sort(objectKeys(node), cmp && cmp(/** @type {import('.').NonArrayNode} */ (node)));
++			var keys = $sort(objectKeys(node), cmp ? cmp(/** @type {import('.').NonArrayNode} */ (node)) : undefined);
+ 			var out = [];
+ 			for (var i = 0; i < keys.length; i++) {
+ 				var key = keys[i];

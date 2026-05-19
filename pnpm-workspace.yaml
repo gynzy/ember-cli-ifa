@@ -1,0 +1,2 @@
+patchedDependencies:
+  json-stable-stringify@1.3.0: patches/json-stable-stringify@1.3.0.patch
