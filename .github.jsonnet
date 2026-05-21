@@ -11,6 +11,7 @@ util.workflowJavascriptPackage(
     'test',
     image=image,
     useCredentials=false,
+    runsOn='ubuntu-latest',
     steps=[
       util.pnpm.checkoutAndPnpm(
         ref='${{ github.event.pull_request.head.sha }}',
