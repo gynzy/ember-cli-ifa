@@ -1,6 +1,7 @@
 {
   "name": "@gynzy/ember-cli-ifa",
-  "version": "0.10.0",
+  "version": "0.10.1",
+  "packageManager": "pnpm@10.33.4",
   "description": "Inject fingerprinted assetMap.json file into your app and provide initializer, service, and helper to dynamically reference fingerprinted assets.",
   "directories": {
     "doc": "doc",
@@ -21,13 +22,19 @@
     "url": "http://github.com/gynzy/ember-cli-ifa.git"
   },
   "engines": {
-    "node": "10.* || >= 12"
+    "node": ">=24"
   },
   "author": {
     "name": "Ruslan Zavacky",
     "email": "ruslan.zavacky@gmail.com"
   },
   "license": "MIT",
+  "files": [
+    "addon",
+    "app",
+    "config/environment.js",
+    "index.js"
+  ],
   "devDependencies": {
     "@glimmer/tracking": "^1.0.4",
     "babel-eslint": "^10.1.0",
