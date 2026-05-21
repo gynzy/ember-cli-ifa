@@ -1,8 +1,8 @@
 local util = import '.github/jsonnet/index.jsonnet';
-local image = 'node:24';
+local image = 'mirror.gcr.io/node:24';
 
 util.workflowJavascriptPackage(
-  repositories=['github'],
+  repositories=['github', 'gynzy'],
   packageManager='pnpm',
   branch='main',
   isPublicFork=true,
