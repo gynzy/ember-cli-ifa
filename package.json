@@ -1,7 +1,7 @@
 {
   "name": "@gynzy/ember-cli-ifa",
   "version": "0.10.1",
-  "packageManager": "pnpm@10.33.4",
+  "packageManager": "pnpm@11.13.0",
   "description": "Inject fingerprinted assetMap.json file into your app and provide initializer, service, and helper to dynamically reference fingerprinted assets.",
   "directories": {
     "doc": "doc",
